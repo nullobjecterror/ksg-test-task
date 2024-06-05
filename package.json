@@ -7,7 +7,7 @@
     "build": "tsc",
     "migrate": "ts-node migrations/001_create_users_table.ts",
     "start": "npm run migrate && node dist/server.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "dev": "npm run migrate && ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "npm run migrate && jest"
   },
   "keywords": [],
